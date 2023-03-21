@@ -4,7 +4,7 @@ rm(list = ls())
 
 WGS84proj = 4326
 
-# TOTAL ANALYSIS AREA
+# TOTAL ANALYSIS AREA (set to Gulf of Mexico)
 #-----------------------------------------------------
 north_lat = -81.999996233
 west_lng  = 24.5 
@@ -31,7 +31,7 @@ lst <- lapply(1:nrow(df), function(x){
 })
 sfdf <- st_sfc ((lst), crs = WGS84proj)
 
-# LARGE AIS FILES
+# LARGE AIS FILES (Change direcory set up)
 #-----------------------------------------------------
 AIS.dir <- paste0("H:\\AIS_MarineCad\\data\\")
 inFiles = list.files(path = AIS.dir, pattern="AIS_20", recursive=TRUE, full.names = TRUE) 
